@@ -17,7 +17,7 @@ export class RecipesComponent implements OnInit {
     this.setLocalVariables();
   }
 
-  setLocalVariables(){
+  setLocalVariables() {
 
   this.lclFeatureSelected = this.varFeatureSelected ;
   console.log('intiate ' + this.lclFeatureSelected);
