@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myProject';
+  varFeatureSelected = '';
+
+  checkFeatureSelected(Feature: string ) {
+
+    console.log('Inside App Module ' + Feature );
+    this.varFeatureSelected = Feature ;
+  }
 }

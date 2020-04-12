@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
     selector: 'app-header',
@@ -7,4 +7,28 @@ import { Component } from '@angular/core';
 
 export class HeaderComponent {
 
+    @Output() evntFeatureClicked = new EventEmitter<string>();
+    varFeature = '';
+
+    onRecipeClick() {
+
+        this.varFeature = 'recipe';
+
+        console.log(this.varFeature + ' selected');
+
+        this.evntFeatureClicked.emit(this.varFeature);
+
+
+    }
+
+    onShopListClick() {
+
+
+        this.varFeature = 'shopping-list';
+
+        console.log(this.varFeature + ' selected');
+
+        this.evntFeatureClicked.emit(this.varFeature);
+
+    }
 }
