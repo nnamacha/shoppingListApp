@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Recipe } from './recipe.model';
 
 @Component({
   selector: 'app-recipes',
@@ -8,19 +9,29 @@ import { Component, OnInit, Input } from '@angular/core';
 export class RecipesComponent implements OnInit {
 
   @Input() varFeatureSelected: string;
+  selectedRecipe: Recipe;
+  // @Output() recipeDetails: Recipe ;
 
-  lclFeatureSelected = '' ;
+
+
+
+
   constructor() { }
 
   ngOnInit() {
 
-    this.setLocalVariables();
+  }
+  getRecipeDetails(event: Recipe) {
+
+  this.selectedRecipe = event;
+
   }
 
-  setLocalVariables() {
 
-  this.lclFeatureSelected = this.varFeatureSelected ;
-  console.log('intiate ' + this.lclFeatureSelected);
-  }
+
+
+
+
+
 
 }
