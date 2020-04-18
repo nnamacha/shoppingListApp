@@ -11,7 +11,7 @@ export class RecipeListComponent implements OnInit {
 
   recipes: Recipe[];
 
-  @Output() recipeWasSelected = new EventEmitter<Recipe>();
+
 
 
   constructor( private recipeService: RecipeService) { }
@@ -21,10 +21,10 @@ export class RecipeListComponent implements OnInit {
     this.recipes = this.recipeService.getRecipes();
   }
 
-  currentRecipeSelected(recipe: Recipe) {
+  // currentRecipeSelected(recipe: Recipe) {
 
-    console.log('Inside recipe-list.currentRecipeSelected' + recipe.name);
-    this.recipeWasSelected.emit(recipe);
+  //   console.log('Inside recipe-list.currentRecipeSelected' + recipe.name);
+  //   this.recipeWasSelected.emit(recipe);
 
-  }
+  // }
 }

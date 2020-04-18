@@ -9,7 +9,7 @@ import { Recipe } from '../recipe.model';
 export class RecipeDetailsComponent implements OnInit {
 
    @Input() recipeDetails: Recipe;
-  lclRecipeDetails: Recipe;
+  // lclRecipeDetails: Recipe;
   constructor() { }
 
   ngOnInit() {
