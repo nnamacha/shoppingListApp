@@ -1,14 +1,21 @@
 <div class="rom">
-    <div class="col-xs-5">
+    <div class="col-xs-5" >
         <app-shopping-edit></app-shopping-edit>
         <hr>
-        <h4> Required Ingredients</h4>
-        <ul class="list-group">
-            <a
-                class="list-group-item"
-                style="cursor: pointer"
-                *ngFor="let ingredient of ingredients"
-            >   {{ingredient.name}} {{ingredient.amount}}</a>
-        </ul>
+        <div *ngIf="ingredients ;else noIngredients">
+            <h4 > Required Ingredients</h4>
+            <ul class="list-group" >
+                <a
+                    class="list-group-item"
+                    style="cursor: pointer"
+                    *ngFor="let ingredient of ingredients"
+                >   {{ingredient.name}} {{ingredient.amount}}</a>
+            </ul>
+        </div>
+        
+
+        <ng-template #noIngredients>
+            <p>No Ingredients in shopping Cart</p>
+        </ng-template>
     </div>
 </div>

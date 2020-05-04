@@ -23,14 +23,12 @@ export class RecipesComponent implements OnInit {
 
     this.recipeService.recipeSelected.subscribe((recipe: Recipe) => {
       this.selectedRecipe = recipe;
+
+      console.log('recipe ' + this.selectedRecipe.ingredients) ;
     });
 
   }
-  getRecipeDetails(event: Recipe) {
 
-  this.selectedRecipe = event;
-
-  }
 
 
 
