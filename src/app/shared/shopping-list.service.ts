@@ -7,19 +7,14 @@ import { Ingredient } from './ingredient.model';
 export class ShoppingListService {
 
   changedIngredients = new EventEmitter<Ingredient[]>();
-  numberOfIngredients = new EventEmitter<number>();
-  private ingredients: Ingredient[] = [];
-
+  private ingredients: Ingredient[] = [
+    new Ingredient('Apples', 5),
+    new Ingredient('Banana', 12)
+  ];
 
   addNewIngredients(ingredient: Ingredient) {
 
     this.ingredients.push(ingredient);
-    this.changedIngredients.emit(this.ingredients.slice());
-  }
-
-  addNewIngredientfromSL(ingredient: Ingredient[]) {
-
-    this.ingredients.push(...ingredient);
     this.changedIngredients.emit(this.ingredients.slice());
   }
 
