@@ -7,28 +7,28 @@ import { Component, EventEmitter, Output } from '@angular/core';
 
 export class HeaderComponent {
 
-    @Output() evntFeatureClicked = new EventEmitter<string>();
-    varFeature = '';
+    // @Output() evntFeatureClicked = new EventEmitter<string>();
+    // varFeature = '';
 
-    onRecipeClick() {
+    // onRecipeClick() {
 
-        this.varFeature = 'recipe';
+    //     this.varFeature = 'recipe';
 
-        console.log(this.varFeature + ' selected');
+    //     console.log(this.varFeature + ' selected');
 
-        this.evntFeatureClicked.emit(this.varFeature);
-
-
-    }
-
-    onShopListClick() {
+    //     this.evntFeatureClicked.emit(this.varFeature);
 
 
-        this.varFeature = 'shopping-list';
+    // }
 
-        console.log(this.varFeature + ' selected');
+    // onShopListClick() {
 
-        this.evntFeatureClicked.emit(this.varFeature);
 
-    }
+    //     this.varFeature = 'shopping-list';
+
+    //     console.log(this.varFeature + ' selected');
+
+    //     this.evntFeatureClicked.emit(this.varFeature);
+
+    // }
 }

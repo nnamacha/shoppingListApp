@@ -11,10 +11,34 @@ export class ShoppingListService {
     new Ingredient('Apples', 5),
     new Ingredient('Banana', 12)
   ];
+    debugFlag = true;
 
-  addNewIngredients(ingredient: Ingredient) {
+    logging(message) {
 
-    this.ingredients.push(ingredient);
+      if (this.debugFlag) {
+
+
+
+          console.log(message);
+
+      }
+
+
+    }
+
+
+  addNewIngredients(ingredient: Ingredient[]) {
+
+    this.ingredients.push(...ingredient);
+    this.logging('Inside addNewIngredients');
+    this.logging('Current Ingredients');
+    // tslint:disable-next-line:prefer-const
+    for ( let curLet of this.ingredients) {
+
+
+      this.logging(curLet.name + '---' + curLet.amount);
+
+    }
     this.changedIngredients.emit(this.ingredients.slice());
   }
 
