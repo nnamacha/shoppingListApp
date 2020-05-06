@@ -6,7 +6,9 @@
 <div class="row" >
     <div class="col-xs-12" > 
         <app-recipe-item [recipe]="recipe" 
-        *ngFor="let recipe of recipes" 
-        (recipeSelected)="currentRecipeSelected(recipe)"></app-recipe-item>
+        [index]="i"
+        *ngFor="let recipe of recipes; let i = index" 
+       
+        ></app-recipe-item>
     </div>
 </div>
