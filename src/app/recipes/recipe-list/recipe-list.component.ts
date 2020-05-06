@@ -21,10 +21,5 @@ export class RecipeListComponent implements OnInit {
     this.recipes = this.recipeService.getRecipes();
   }
 
-  // currentRecipeSelected(recipe: Recipe) {
 
-  //   console.log('Inside recipe-list.currentRecipeSelected' + recipe.name);
-  //   this.recipeWasSelected.emit(recipe);
-
-  // }
 }
