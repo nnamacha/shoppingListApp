@@ -11,7 +11,7 @@ export class ShoppingListService {
     new Ingredient('Apples', 5),
     new Ingredient('Banana', 12)
   ];
-    debugFlag = false;
+    debugFlag = true;
 
     logging(message) {
 
